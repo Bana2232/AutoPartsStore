@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Добро пожаловать!</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Мы рады предложить вам широкий ассортимент качественных запчастей для вашего автомобиля.
+            Наш опытный персонал поможет вам найти нужную деталь и обеспечит быструю доставку по всей стране.</p>
+    </div>
+    <div class="overflow-hidden" style="max-height: 50vh;">
+        <div class="container px-5">
+            <img src="{% static 'index.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                 width="700" height="500" loading="lazy">
+        </div>
+    </div>
+</div>
+
+<div class="px-4 py-5 my-5 text-center">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+        <path d="M5.32943 3.27152C6.56252 2.83314 7.9923 3.10743 8.97927 4.0944C10.1002 5.21531 10.3019 6.90735 9.5843 8.23378L20.293 18.9436L18.8788 20.3579L8.16982 9.64869C6.84325 10.3668 5.15069 10.1653 4.02952 9.04415C3.04227 8.0569 2.7681 6.62659 3.20701 5.39326L5.44373 7.62994C6.02952 8.21572 6.97927 8.21572 7.56505 7.62994C8.15084 7.04415 8.15084 6.0944 7.56505 5.50862L5.32943 3.27152ZM15.6968 5.15506L18.8788 3.38729L20.293 4.80151L18.5252 7.98349L16.7574 8.33704L14.6361 10.4584L13.2219 9.04415L15.3432 6.92283L15.6968 5.15506ZM8.97927 13.2868L10.3935 14.701L5.09018 20.0043C4.69966 20.3948 4.06649 20.3948 3.67597 20.0043C3.31334 19.6417 3.28744 19.0698 3.59826 18.6773L3.67597 18.5901L8.97927 13.2868Z"></path>
+    </svg>
+    <h1 class="display-5 fw-bold text-body-emphasis">Вы попали по адресу</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">В нашем интернет-магазине вы найдете широкий ассортимент автозапчастей для любых марок и
+            моделей автомобилей. Мы предлагаем конкурентные цены, быструю доставку и высокий уровень сервиса. Наша
+            команда экспертов поможет вам выбрать нужную запчасть и ответит на все ваши вопросы. Мы работаем для того,
+            чтобы обеспечить ваш автомобиль всем необходимым для безопасной и комфортной езды.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="#sel"><input type="button" class="btn btn-outline-dark btn-lg px-4 gap-3"
+                                  value="Перейти к покупкам"></a>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Наши преимущества</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+                 style="border-radius: 15px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                    <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Широкий ассортимент для любого автомобиля</h3>
+                <p>В нашем интернет-магазине вы найдете более 100 000 автозапчастей для различных марок и моделей
+                    автомобилей. Мы предлагаем запчасти для легковых автомобилей, грузовиков, мотоциклов и других типов
+                    транспортных средств. Наш ассортимент постоянно обновляется, чтобы обеспечить вам доступ к последним
+                    инновациям в области автозапчастей.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+                 style="border-radius: 15px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                    <path d="M17 8H20L23 12.0557V18H20.9646C20.7219 19.6961 19.2632 21 17.5 21C15.7368 21 14.2781 19.6961 14.0354 18H8.96456C8.72194 19.6961 7.26324 21 5.5 21C3.73676 21 2.27806 19.6961 2.03544 18H1V6C1 5.44772 1.44772 5 2 5H16C16.5523 5 17 5.44772 17 6V8ZM17 10V13H21V12.715L18.9917 10H17Z"></path>
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Получите запчасть быстро и удобно</h3>
+                <p>Мы понимаем, как важно получить нужную автозапчасть быстро и удобно. Поэтому мы предлагаем различные
+                    варианты доставки, чтобы вы могли выбрать самый подходящий для вас способ получения заказа. Наша
+                    логистическая система позволяет доставлять запчасти в кратчайшие сроки, а наша команда логистов
+                    работает над тем, чтобы обеспечить максимальную скорость и надежность доставки.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+                 style="border-radius: 15px; padding: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                    <path d="M20 22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13Z"></path>
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Мы слушаем и понимаем ваши потребности</h3>
+                <p>Мы понимаем, что каждый клиент имеет свои уникальные потребности. Поэтому мы слушаем и понимаем ваши
+                    потребности, чтобы предложить вам лучшие решения. Наша команда экспертов готовы помочь вам найти
+                    нужную запчасть, ответить на ваши вопросы и обеспечить ваше полное удовлетворение.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 style="margin-left: 2%; margin-right: 2% ;border-bottom: 1px solid #ddd"
+    id="sel">Выберите комплектующее</h1>
+
+<div class="cont" style="display: flex; margin-left: 2%; margin-right: 2%; justify-content: center;">
+    <div class="items-list" style="width: 100%;">
+        <div class="cards">
+            {% for item in items %}
+            <div class="card">
+
+                <div class="images">
+                    <div class="slider">
+                        <a href="{% url 'store:item_detail' item.id %}">
+                            <div class="slides">
+                                {% for photo in item.images.all %}
+                                <div class="slide" style='background-image: url({{ photo.image.url }});'></div>
+                                {% endfor %}
+                            </div>
+                        </a>
+                        <button class="prev" onclick="changeSlide(-1, {{ item.id }} - 1)">&#10094;</button>
+                        <button class="next" onclick="changeSlide(1, {{ item.id }} - 1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <a class="card-title" href="{% url 'store:item_detail' item.id %}">{{ item.title }}</a>
+                    <p class="card-price">{{ item.price }} ₽</p>
+                    <a href="{% url 'store:cart_add' item.id %}" class="btn btn-outline-dark">В корзину</a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        {% if items|length != 0 %}
+
+        {% include "pagination.html" with page=pages %}
+        {% else %}
+        <p align="center" style="color: #ddd; font-size: 27px">Ничего не найдено. Скоро мы это исправим</p>
+        {% endif %}
+    </div>
+
+</div>
+
+<script src="{% static 'js/script1.js' %}"></script>
+{% endblock %}
